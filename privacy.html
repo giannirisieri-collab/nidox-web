@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Política de Privacidad — NidoX</title>
+<style>
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    max-width: 720px;
+    margin: 40px auto;
+    padding: 0 20px;
+    line-height: 1.6;
+    color: #222;
+  }
+  h1 { font-size: 28px; margin-bottom: 4px; }
+  h2 { font-size: 18px; margin-top: 32px; color: #333; }
+  .updated { color: #888; font-size: 14px; margin-bottom: 32px; }
+  ul { padding-left: 20px; }
+  li { margin: 6px 0; }
+  a { color: #4a3aa0; }
+  .highlight {
+    background: #f4f1ff;
+    border-left: 3px solid #4a3aa0;
+    padding: 12px 16px;
+    margin: 16px 0;
+    border-radius: 4px;
+  }
+  footer {
+    margin-top: 48px;
+    padding-top: 16px;
+    border-top: 1px solid #eee;
+    color: #888;
+    font-size: 13px;
+  }
+</style>
+</head>
+<body>
+
+<h1>Política de Privacidad — NidoX</h1>
+<p class="updated">Última actualización: 25 de abril de 2026</p>
+
+<div class="highlight">
+<strong>En resumen:</strong> NidoX es 100% local. Tus conversaciones con asistentes de IA nunca salen de tu computadora. No tenemos servidores que reciban tus datos.
+</div>
+
+<h2>1. Quiénes somos</h2>
+<p>NidoX es un producto desarrollado por Gianni Signorelli, en el marco de SANSON SOFTWARE SpA. Es una aplicación de escritorio + extensión de navegador que permite mantener memoria persistente entre sesiones de asistentes de IA (ChatGPT, Claude, Gemini, y otros).</p>
+
+<h2>2. Qué datos recolectamos</h2>
+<p><strong>Ninguno.</strong> NidoX no envía ningún dato a servidores externos. Toda la información que la aplicación procesa se guarda exclusivamente en tu propia computadora, en la carpeta <code>~/.nidox/</code>.</p>
+
+<h2>3. Qué guarda NidoX en tu computadora</h2>
+<ul>
+  <li>Resúmenes de tus conversaciones con asistentes de IA, generados por la propia IA cuando vos hacés clic en "Terminar sesión y guardar".</li>
+  <li>Una "memoria maestra" por proyecto, también generada por la IA.</li>
+  <li>Configuración de proyectos creados por vos.</li>
+  <li>Logs técnicos de errores (locales, no se envían).</li>
+</ul>
+<p>Todos estos archivos están en tu PC y vos sos el único que tiene acceso. Podés eliminarlos en cualquier momento borrando la carpeta <code>~/.nidox/</code>.</p>
+
+<h2>4. Permisos del navegador</h2>
+<p>La extensión Chrome de NidoX solicita permisos para:</p>
+<ul>
+  <li>Leer el contenido de las páginas de los asistentes de IA soportados (ChatGPT, Claude, Gemini, Copilot, Perplexity, Grok, Mistral, DeepSeek, Poe), únicamente para capturar tus conversaciones cuando vos pedís guardarlas.</li>
+  <li>Comunicarse con la aplicación local de NidoX (en <code>localhost:7474</code>) para guardar y recuperar memoria.</li>
+</ul>
+<p>La extensión no envía datos a ningún servidor externo. La comunicación es exclusivamente entre tu navegador y la aplicación instalada en tu PC.</p>
+
+<h2>5. Sistema de licencias</h2>
+<p>Para validar tu licencia, NidoX consulta una vez al día un servidor remoto enviando únicamente el código de licencia (no datos personales ni contenido de tus conversaciones). Esta consulta solo verifica que la licencia sea válida.</p>
+
+<h2>6. Servicios de terceros</h2>
+<p>NidoX no utiliza servicios de terceros para procesar tus datos. Sin embargo, NidoX inyecta texto en interfaces de IA que vos elegís usar (ChatGPT, Claude, Gemini, etc.). Esos asistentes tienen sus propias políticas de privacidad sobre las conversaciones que mantenés con ellos. NidoX no controla ni interviene en cómo esos servicios manejan tus datos.</p>
+
+<h2>7. Telemetría opcional</h2>
+<p>NidoX incluye un sistema de reporte de errores que está <strong>desactivado por defecto</strong>. Si vos lo activás manualmente, se enviarán reportes anónimos de errores técnicos (sin contenido de conversaciones) para ayudarnos a mejorar el producto. Podés desactivarlo en cualquier momento.</p>
+
+<h2>8. Niños</h2>
+<p>NidoX no está dirigido a menores de 13 años y no recolecta datos de menores.</p>
+
+<h2>9. Cambios en esta política</h2>
+<p>Si actualizamos esta política, el cambio quedará reflejado en la fecha del encabezado. Te recomendamos revisarla ocasionalmente.</p>
+
+<h2>10. Contacto</h2>
+<p>Para cualquier consulta sobre esta política o sobre el manejo de datos en NidoX:</p>
+<p><strong>Email:</strong> <a href="mailto:gianni.risieri@gmail.com">gianni.risieri@gmail.com</a></p>
+
+<footer>
+  © 2026 Gianni Signorelli — SANSON SOFTWARE SpA. Todos los derechos reservados.
+</footer>
+
+</body>
+</html>
