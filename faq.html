@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Preguntas frecuentes — NidoX</title>
+  <style>
+    body { max-width: 820px; margin: 40px auto; padding: 0 20px;
+           font-family: -apple-system, system-ui, "Segoe UI", sans-serif;
+           color: #1a1a2e; line-height: 1.6; }
+    h1 { color: #534AB7; border-bottom: 2px solid #534AB7; padding-bottom: 8px; }
+    h2 { color: #534AB7; margin-top: 40px; font-size: 22px; }
+    a { color: #7f77dd; }
+    .meta { color: #7a7a99; font-size: 13px; }
+    code { background: #f3f3f5; padding: 2px 6px; border-radius: 4px; font-size: 13px; font-family: Consolas, monospace; }
+    details { background: #fafafc; border: 1px solid #e0e0ea; border-radius: 8px;
+              padding: 14px 18px; margin: 12px 0; cursor: pointer; }
+    details[open] { background: #fff; box-shadow: 0 2px 8px rgba(83,74,183,0.08); }
+    details summary { font-weight: 600; color: #1a1a2e; outline: none; }
+    details summary:hover { color: #534AB7; }
+    details > *:not(summary) { margin-top: 12px; }
+    .toc { background: #f3f3f5; border-radius: 8px; padding: 14px 22px; margin: 24px 0; }
+    .toc ul { margin: 8px 0; padding-left: 20px; }
+    .toc a { text-decoration: none; }
+    .toc a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+
+<h1>Preguntas frecuentes — NidoX</h1>
+<p class="meta">Última actualización: 2026-04-27 · Aplica a NidoX v2.1.7 y posteriores.</p>
+
+<p>Si tu pregunta no está acá, escribinos a
+<a href="mailto:gianni.risieri@gmail.com">gianni.risieri@gmail.com</a>.
+Respondemos en horario laboral GMT-3.</p>
+
+<div class="toc">
+  <strong>Índice</strong>
+  <ul>
+    <li><a href="#general">General</a></li>
+    <li><a href="#instalacion">Instalación</a></li>
+    <li><a href="#uso">Uso diario</a></li>
+    <li><a href="#privacidad">Privacidad y datos</a></li>
+    <li><a href="#licencias">Licencias y compras</a></li>
+    <li><a href="#problemas">Problemas comunes</a></li>
+  </ul>
+</div>
+
+<h2 id="general">General</h2>
+
+<details>
+  <summary>¿Qué es NidoX?</summary>
+  <p>NidoX le da memoria persistente a tus chats con inteligencias
+  artificiales (ChatGPT, Claude, Gemini, Copilot, Perplexity, Mistral,
+  DeepSeek, Grok, Poe). Cada vez que terminás una sesión, NidoX le pide a la
+  IA un resumen estructurado y lo guarda localmente, organizado por proyecto.
+  La próxima vez que abras un chat, NidoX inyecta automáticamente el contexto
+  del proyecto y la IA arranca sabiendo todo lo que hablaron antes.</p>
+</details>
+
+<details>
+  <summary>¿Cuánto cuesta?</summary>
+  <p>NidoX se vende como licencia de pago único. El precio actual está en
+  <a href="https://nidox.app">nidox.app</a> (o el dominio que estés viendo).
+  Tu licencia te activa hasta 2 dispositivos por defecto y no vence —salvo
+  que comprés un plan con vencimiento explícito.</p>
+</details>
+
+<details>
+  <summary>¿Funciona offline?</summary>
+  <p>La parte de <strong>guardar y leer tus proyectos</strong> sí — todo vive
+  en tu PC, no necesita internet. La parte de <strong>chatear con la IA</strong>
+  sí necesita conexión (porque la IA está en sus servidores). La validación de
+  licencia tiene 7 días de cache: podés trabajar sin internet hasta una semana
+  desde la última validación exitosa.</p>
+</details>
+
+<details>
+  <summary>¿En qué sistemas operativos funciona?</summary>
+  <p>Windows 10/11 (target principal hoy). macOS y Linux están planificados
+  para versiones próximas. Si necesitás Mac/Linux ya, escribinos antes de
+  comprar — te avisamos cuándo sale.</p>
+</details>
+
+<details>
+  <summary>¿Con qué IAs funciona?</summary>
+  <p>NidoX se integra con 9 plataformas: ChatGPT (chatgpt.com y chat.openai.com),
+  Claude (claude.ai), Gemini (gemini.google.com), Copilot (copilot.microsoft.com
+  y bing.com), Grok (grok.com y x.com/i/grok), Poe (poe.com), Perplexity
+  (perplexity.ai), Mistral Le Chat (chat.mistral.ai) y DeepSeek
+  (chat.deepseek.com). Si tu IA favorita falta, pedila por email.</p>
+</details>
+
+<h2 id="instalacion">Instalación</h2>
+
+<details>
+  <summary>¿Cómo instalo NidoX?</summary>
+  <p>Necesitás dos cosas:</p>
+  <ol>
+    <li><strong>App de escritorio</strong>: descargás el instalador para tu
+    sistema operativo desde <a href="https://github.com/giannirisieri-collab/nidox-releases/releases">github.com/giannirisieri-collab/nidox-releases</a>
+    y hacés doble clic. Se instala en segundos.</li>
+    <li><strong>Extensión Chrome</strong>: instalala desde Chrome Web Store
+    (link en la página de releases o buscá "NidoX" en el store). Edge y otros
+    navegadores Chromium también funcionan.</li>
+  </ol>
+  <p>Después abrís la app, pegás tu código de licencia, y listo.</p>
+</details>
+
+<details>
+  <summary>Windows me dice "Aplicación no reconocida". ¿Es seguro?</summary>
+  <p>Sí. El warning aparece en builds nuevos hasta que Microsoft acumula
+  suficientes descargas firmadas para "confiar" en el certificado. Si querés
+  validar vos: el archivo está disponible en nuestro repo público
+  <a href="https://github.com/giannirisieri-collab/nidox-releases">nidox-releases</a>
+  con el hash SHA-256 publicado para cada release. Compará con el que
+  descargaste.</p>
+  <p>Para evitar el warning hacé clic en "Más información" → "Ejecutar de
+  todas formas". A partir de la primera ejecución, no vuelve a preguntar.</p>
+</details>
+
+<details>
+  <summary>¿Necesito ser admin para instalar?</summary>
+  <p>No. NidoX se instala en tu carpeta de usuario, no toca system files ni
+  registry. Cualquier cuenta de Windows puede instalarlo y desinstalarlo.</p>
+</details>
+
+<details>
+  <summary>¿Cómo desinstalo NidoX?</summary>
+  <p>En Windows: Configuración → Aplicaciones → buscar "NidoX" → Desinstalar.
+  Tus proyectos y memorias se quedan en <code>~/.nidox/</code> por seguridad
+  — si reinstalás recuperás todo. Si querés borrar TODO incluyendo proyectos,
+  borrá la carpeta <code>C:\Users\&lt;tu-usuario&gt;\.nidox\</code> a mano
+  después de desinstalar.</p>
+</details>
+
+<h2 id="uso">Uso diario</h2>
+
+<details>
+  <summary>¿Cómo uso NidoX en una sesión normal?</summary>
+  <ol>
+    <li>Asegurate que la app NidoX esté abierta (ícono morado en la barra de
+    tareas). Si la cerraste, abrila desde el shortcut "Claude - NidoX" en el
+    Escritorio.</li>
+    <li>Abrí el chat de IA que usás (ChatGPT, Claude, etc.) en una pestaña
+    nueva.</li>
+    <li>NidoX inyecta automáticamente el contexto del proyecto activo. Si es
+    la primera vez en esa pestaña, te aparece un selector para elegir
+    proyecto.</li>
+    <li>Conversá con la IA como siempre.</li>
+    <li>Cuando termines, hacé clic en el botón flotante <strong>"⏹ Terminar
+    sesión y guardar"</strong> abajo a la izquierda.</li>
+    <li>NidoX le pide a la IA un resumen estructurado y guarda todo
+    automáticamente.</li>
+  </ol>
+</details>
+
+<details>
+  <summary>¿Qué es la "Memoria Maestra"?</summary>
+  <p>Es un único documento markdown por proyecto donde la IA va registrando
+  todo lo importante que se charla, sesión tras sesión. Cada vez que cerrás
+  una sesión, la IA toma la memoria vieja y la <strong>reescribe entera</strong>
+  integrando lo nuevo y descartando lo obsoleto. Resultado: un resumen vivo
+  del proyecto que cabe en cualquier contexto, pero que captura todo.</p>
+  <p>Ubicación física: <code>C:\Users\&lt;tu-usuario&gt;\.nidox\&lt;proyecto&gt;\memoria_maestra.md</code></p>
+</details>
+
+<details>
+  <summary>¿Puedo tener varios proyectos a la vez?</summary>
+  <p>Sí, ilimitados. En la app de escritorio creás los proyectos que quieras
+  y elegís cuál es el "activo" — ese es el contexto que se inyecta al abrir
+  pestañas de IA. Para cambiar de proyecto activo: app NidoX → seleccionar
+  proyecto en el dropdown → "Usar".</p>
+</details>
+
+<details>
+  <summary>¿La IA siempre respeta el formato del resumen?</summary>
+  <p>Casi siempre. Cuando no lo hace (por ejemplo, te devuelve solo el
+  template sin contenido real), NidoX detecta el fallo y te abre un modal
+  con la respuesta cruda en un cuadro editable. Podés corregir lo que la IA
+  dijo y guardar igualmente. No se pierde la conversación.</p>
+</details>
+
+<details>
+  <summary>¿Puedo editar la Memoria Maestra a mano?</summary>
+  <p>Sí. El archivo <code>memoria_maestra.md</code> es markdown plano. Abrilo
+  con cualquier editor de texto (VSCode, Notepad++, Obsidian, lo que uses) y
+  modificalo. La próxima sesión NidoX inyecta tu versión editada como
+  contexto.</p>
+  <p>Ojo: la IA puede sobrescribir tus cambios cuando reescribe la memoria
+  al final de su próxima sesión. Si querés que algo permanente quede, pegalo
+  en una sección "Reglas duras" o similar y mencionalo en el chat para que
+  la IA lo respete.</p>
+</details>
+
+<h2 id="privacidad">Privacidad y datos</h2>
+
+<details>
+  <summary>¿NidoX envía mis chats a sus servidores?</summary>
+  <p><strong>No, jamás.</strong> El contenido de tus conversaciones con IAs
+  vive 100% en tu computadora, en <code>~/.nidox/</code>. NidoX solo se
+  comunica con tres servicios externos:</p>
+  <ul>
+    <li><strong>Cloudflare</strong> (1 vez por arranque): valida que tu
+    licencia sea válida. Manda solo tu código + un identificador anónimo
+    de máquina (hash MAC + hostname). NO manda tus chats.</li>
+    <li><strong>Sentry</strong> (opt-in): si activaste reportes de error,
+    manda tracebacks técnicos cuando algo falla. NO manda tus chats.</li>
+    <li><strong>Las IAs que vos elegís</strong>: ChatGPT, Claude, etc.
+    reciben tus mensajes como siempre — eso depende de su política, no de
+    nosotros.</li>
+  </ul>
+  <p>Más detalle en nuestra <a href="privacy.html">política de privacidad</a>.</p>
+</details>
+
+<details>
+  <summary>¿Qué pasa si OpenAI/Anthropic/etc. cambian su web y NidoX deja de funcionar?</summary>
+  <p>Lo arreglamos en una nueva versión. El código de NidoX está construido
+  con selectores en cascada que toleran cambios menores. Cuando la IA hace
+  un cambio mayor que rompe la integración, sale una actualización. Si tu
+  versión queda atrás, la app te avisa que hay una nueva.</p>
+</details>
+
+<details>
+  <summary>¿Mis chats están encriptados en mi disco?</summary>
+  <p>No, están en archivos JSON y markdown legibles. La premisa es: si
+  alguien tiene acceso a tu disco con tu cuenta de usuario, ya tiene acceso
+  a todo lo que hagas en la PC. Si necesitás encripción adicional, usá
+  BitLocker (Windows), FileVault (Mac) o LUKS (Linux) a nivel de disco — eso
+  protege también <code>~/.nidox/</code> sin esfuerzo extra.</p>
+</details>
+
+<h2 id="licencias">Licencias y compras</h2>
+
+<details>
+  <summary>¿En cuántos dispositivos puedo activar mi licencia?</summary>
+  <p>2 por defecto. Si necesitás más, contactanos antes de comprar.</p>
+</details>
+
+<details>
+  <summary>Compré una PC nueva. ¿Puedo migrar mi licencia?</summary>
+  <p>Sí. Si tu PC vieja sigue activa, primero desactivala desde la app
+  (botón "Desactivar este dispositivo"). Eso libera un slot. Después instalás
+  NidoX en la PC nueva y pegás tu mismo código.</p>
+  <p>Si la PC vieja no arranca y no podés desactivar, escribinos por email
+  con tu código y te liberamos el slot manualmente.</p>
+</details>
+
+<details>
+  <summary>Perdí el email con mi código. ¿Cómo lo recupero?</summary>
+  <p>Andá a <a href="recover.html">nidox-web/recover.html</a> y pegá el email
+  con que comprate. Te re-enviamos el código a tu inbox.</p>
+</details>
+
+<details>
+  <summary>¿Aceptan reembolsos?</summary>
+  <p>Sí. Tenés <strong>14 días</strong> sin preguntas. Después, evaluamos
+  caso por caso. Política completa: <a href="refunds.html">refunds.html</a>.</p>
+</details>
+
+<details>
+  <summary>¿Cómo aparece el cargo en mi tarjeta?</summary>
+  <p>Como <code>PADDLE.NET*NIDOX</code> o variantes. Paddle es nuestro
+  procesador de pagos (Merchant of Record): ellos te facturan a vos, después
+  nos transfieren a nosotros. Esto nos permite venderte desde Chile sin que
+  tengas vos que lidiar con conversiones de moneda complicadas.</p>
+</details>
+
+<h2 id="problemas">Problemas comunes</h2>
+
+<details>
+  <summary>El botón "Terminar sesión y guardar" no aparece en mi pestaña.</summary>
+  <p>Tres causas posibles:</p>
+  <ol>
+    <li><strong>La pestaña estaba abierta antes de instalar la extensión.</strong>
+    Solución: F5 (refrescar). La extensión solo se inyecta cuando una pestaña
+    se carga después de instalada.</li>
+    <li><strong>La app NidoX no está corriendo.</strong> Solución: abrí la app
+    desde el shortcut. El botón aparece en pestañas existentes a los ~2
+    segundos.</li>
+    <li><strong>Estás en una URL de la IA que no está en nuestra lista.</strong>
+    Algunas IAs tienen sub-dominios distintos. Mandanos la URL exacta.</li>
+  </ol>
+</details>
+
+<details>
+  <summary>Hago clic en "Terminar sesión" y dice "NidoX: servidor no disponible".</summary>
+  <p>La app de escritorio NidoX no está corriendo. Abrila desde el shortcut
+  "Claude - NidoX" en el Escritorio. Si ya está corriendo, verificá que el
+  status diga "Activo en localhost:7474" (luz verde).</p>
+</details>
+
+<details>
+  <summary>"NidoX: no se encontró campo de texto"</summary>
+  <p>La IA cambió su markup y nuestros selectores no encuentran el input.
+  Esto se arregla en la siguiente versión de NidoX (selectores en cascada).
+  Mientras tanto, podés guardar la sesión a mano: copia el texto del chat,
+  pegalo en un editor, y guardalo como <code>~/.nidox/&lt;proyecto&gt;/sesion_manual.md</code>.</p>
+  <p>Avisanos por email con la URL exacta para priorizar el fix.</p>
+</details>
+
+<details>
+  <summary>La memoria que NidoX guarda parece basura / texto sin contenido.</summary>
+  <p>Probablemente la IA "echó de vuelta" el template de prompt sin generar
+  contenido real (pasa especialmente si la conversación fue muy corta o si
+  la IA estaba sobrecargada). En NidoX v2.1.5+ esto se detecta y abre un
+  modal de fallback editable. Si te pasa con una versión vieja, actualizá la
+  app.</p>
+</details>
+
+<details>
+  <summary>Quiero usar NidoX en una pestaña de incógnito.</summary>
+  <p>Por defecto las extensiones Chrome no corren en incógnito. Para
+  habilitarlo: <code>chrome://extensions</code> → tarjeta de NidoX → Detalles →
+  activar "Permitir en modo incógnito". Tus proyectos y memoria se mantienen
+  igual (todo está en disco, no en cookies).</p>
+</details>
+
+<details>
+  <summary>¿NidoX funciona si tengo un firewall o antivirus muy estricto?</summary>
+  <p>NidoX abre un servidor HTTP en <code>localhost:7474</code>. Si tu firewall
+  bloquea conexiones loopback (raro pero posible en empresas), la extensión
+  no puede comunicarse con la app. Solución: agregá <code>NidoX.exe</code> a
+  la whitelist del firewall.</p>
+</details>
+
+<details>
+  <summary>¿Puedo automatizar / scriptear NidoX?</summary>
+  <p>Sí. La app expone una API HTTP en <code>localhost:7474</code> documentada
+  en nuestro <a href="https://github.com/giannirisieri-collab/nidox-releases">README de releases</a>.
+  Necesitás el token de auth (en <code>~/.nidox/.token</code>) y mandarlo en
+  el header <code>X-Nidox-Token</code>. Endpoints: <code>/projects</code>,
+  <code>/projects/&lt;n&gt;/context</code>, <code>/projects/&lt;n&gt;/session</code>
+  (POST), etc.</p>
+</details>
+
+<hr>
+
+<p class="meta">
+¿No encontraste lo que buscabas? Email a
+<a href="mailto:gianni.risieri@gmail.com">gianni.risieri@gmail.com</a>.<br>
+Si reportás un bug, incluí: versión de NidoX, sistema operativo, IA donde
+ocurrió y el contenido de <code>~/.nidox/.errors.log</code> si existe.
+</p>
+
+</body>
+</html>

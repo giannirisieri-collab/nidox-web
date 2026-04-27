@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Recuperar mi licencia — NidoX</title>
+  <style>
+    body { max-width: 560px; margin: 60px auto; padding: 0 20px;
+           font-family: -apple-system, system-ui, "Segoe UI", sans-serif;
+           color: #1a1a2e; line-height: 1.6; }
+    h1 { color: #534AB7; border-bottom: 2px solid #534AB7; padding-bottom: 8px; }
+    a { color: #7f77dd; }
+    .meta { color: #7a7a99; font-size: 13px; }
+    label { display: block; margin-top: 18px; font-weight: 600; font-size: 14px; }
+    input[type="email"] {
+      width: 100%; padding: 12px 14px; border: 1px solid #d0d0e0; border-radius: 8px;
+      font-size: 15px; box-sizing: border-box; margin-top: 6px;
+      font-family: inherit;
+    }
+    input[type="email"]:focus { outline: 2px solid #534AB7; border-color: #534AB7; }
+    button {
+      width: 100%; padding: 14px; margin-top: 24px;
+      background: #534AB7; color: white; border: none; border-radius: 8px;
+      font-size: 15px; font-weight: 600; cursor: pointer;
+      font-family: inherit;
+    }
+    button:hover { background: #443ea0; }
+    button:disabled { background: #9a9ab2; cursor: not-allowed; }
+    .msg { padding: 14px 18px; border-radius: 8px; margin-top: 20px; font-size: 14px; }
+    .msg.ok { background: #e8f5e9; border-left: 4px solid #1D9E75; color: #1a3d29; }
+    .msg.err { background: #ffebee; border-left: 4px solid #c62828; color: #5d1414; }
+    .msg.info { background: #e3f2fd; border-left: 4px solid #2196f3; color: #0d3a5c; }
+    .hint { color: #7a7a99; font-size: 12px; margin-top: 4px; }
+  </style>
+</head>
+<body>
+
+<h1>Recuperar mi licencia</h1>
+<p>Pegá el email con que comprate NidoX y te re-enviamos el código a tu inbox.</p>
+
+<form id="recover-form">
+  <label for="email">Email de la compra</label>
+  <input type="email" id="email" name="email" required autofocus
+         placeholder="tu-email@ejemplo.com">
+  <p class="hint">El mismo email que usaste cuando compraste en Paddle. Si
+  comprate hace mucho y no estás seguro cuál era, probá los que tengas activos
+  uno por uno.</p>
+
+  <button type="submit" id="submit-btn">Enviarme mi código</button>
+</form>
+
+<div id="msg"></div>
+
+<hr style="margin-top: 40px;">
+<p class="meta">
+¿Tu email ya no está activo? Escribinos a
+<a href="mailto:gianni.risieri@gmail.com">gianni.risieri@gmail.com</a>
+con tu nombre completo y, si lo recordás, fecha aproximada de compra.<br><br>
+¿Querés revocar un dispositivo viejo para liberar un slot? Mirá la
+<a href="faq.html#licencias">FAQ — sección Licencias</a>.
+</p>
+
+<script>
+  // URL del Worker — se reemplaza al deploy con el subdomain real.
+  const WORKER_URL = "https://nidox-licenses.gianni-risieri.workers.dev";
+
+  document.getElementById("recover-form").addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const email = document.getElementById("email").value.trim();
+    const btn = document.getElementById("submit-btn");
+    const msgDiv = document.getElementById("msg");
+
+    btn.disabled = true;
+    btn.textContent = "Enviando...";
+    msgDiv.innerHTML = "";
+
+    try {
+      const r = await fetch(`${WORKER_URL}/recover-license`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email }),
+      });
+      const data = await r.json();
+
+      if (r.ok && data.ok) {
+        msgDiv.innerHTML = '<div class="msg ok">' +
+          '✓ Si encontramos una licencia activa con ese email, te enviamos un ' +
+          'mail con tu código en los próximos minutos. <strong>Revisá también la ' +
+          'carpeta de spam.</strong></div>';
+        document.getElementById("email").value = "";
+      } else if (r.status === 429) {
+        msgDiv.innerHTML = '<div class="msg err">' +
+          '⚠ Demasiados intentos en los últimos minutos. Esperá 5 minutos y ' +
+          'volvé a intentar.</div>';
+      } else {
+        msgDiv.innerHTML = '<div class="msg err">' +
+          'No pudimos procesar la solicitud. Si el problema persiste ' +
+          'escribinos a gianni.risieri@gmail.com.</div>';
+      }
+    } catch (err) {
+      msgDiv.innerHTML = '<div class="msg err">' +
+        'Error de red. Verificá tu conexión y reintentá.</div>';
+    } finally {
+      btn.disabled = false;
+      btn.textContent = "Enviarme mi código";
+    }
+  });
+</script>
+
+</body>
+</html>

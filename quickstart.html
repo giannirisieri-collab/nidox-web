@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Quickstart — Tu primera sesión con NidoX en 5 minutos</title>
+  <style>
+    body { max-width: 760px; margin: 40px auto; padding: 0 20px;
+           font-family: -apple-system, system-ui, "Segoe UI", sans-serif;
+           color: #1a1a2e; line-height: 1.65; }
+    h1 { color: #534AB7; border-bottom: 2px solid #534AB7; padding-bottom: 8px; font-size: 28px; }
+    h2 { color: #534AB7; margin-top: 40px; font-size: 22px; }
+    h3 { margin-top: 28px; font-size: 17px; }
+    a { color: #7f77dd; }
+    .meta { color: #7a7a99; font-size: 13px; }
+    code { background: #f3f3f5; padding: 2px 6px; border-radius: 4px; font-size: 13px; font-family: Consolas, monospace; }
+    pre { background: #0f0f1a; color: #e8e8f0; padding: 14px 18px; border-radius: 8px; overflow-x: auto;
+          font-size: 13px; line-height: 1.5; font-family: Consolas, monospace; }
+    .step { background: #f8f8fa; border-left: 4px solid #534AB7; border-radius: 0 8px 8px 0;
+            padding: 18px 22px; margin: 24px 0; }
+    .step-num { color: #534AB7; font-weight: 600; font-size: 14px; text-transform: uppercase; letter-spacing: 0.5px; }
+    .step h3 { margin-top: 0; }
+    .ok { background: #e8f5e9; padding: 12px 16px; border-left: 4px solid #1D9E75;
+          border-radius: 0 4px 4px 0; margin: 16px 0; }
+    .warn { background: #fff3e0; padding: 12px 16px; border-left: 4px solid #E2A24B;
+            border-radius: 0 4px 4px 0; margin: 16px 0; }
+    .toc { background: #f3f3f5; border-radius: 8px; padding: 14px 22px; margin: 24px 0; font-size: 14px; }
+    .toc ol { margin: 8px 0; padding-left: 22px; }
+    .keyboard { background: #1a1a2e; color: #e8e8f0; padding: 2px 8px; border-radius: 4px;
+                font-size: 12px; border: 1px solid #534AB7; }
+    .estimated { display: inline-block; background: #fff8e1; color: #B26100;
+                 padding: 2px 8px; border-radius: 4px; font-size: 12px; margin-left: 8px; }
+  </style>
+</head>
+<body>
+
+<h1>Quickstart — Tu primera sesión con NidoX</h1>
+<p class="meta">Tiempo total estimado: <strong>5-7 minutos</strong>. Aplica a NidoX v2.1.7+.</p>
+
+<p>Este documento te lleva de cero a "estás guardando memoria persistente
+con tu IA favorita" en 7 pasos. Si te trabás en alguno, mirá la
+<a href="faq.html">FAQ</a> o escribinos a
+<a href="mailto:gianni.risieri@gmail.com">gianni.risieri@gmail.com</a>.</p>
+
+<div class="toc">
+  <strong>Los 7 pasos</strong>
+  <ol>
+    <li>Descargar e instalar NidoX (la app)</li>
+    <li>Activar tu licencia</li>
+    <li>Crear tu primer proyecto</li>
+    <li>Iniciar el server local</li>
+    <li>Instalar la extensión Chrome</li>
+    <li>Abrir tu IA y hacer la primera sesión</li>
+    <li>Cerrar la sesión y verificar que se guardó</li>
+  </ol>
+</div>
+
+<!-- ──────────────────────────────────────────────────────────── -->
+
+<div class="step">
+  <div class="step-num">Paso 1 <span class="estimated">~1 min</span></div>
+  <h3>Descargar e instalar NidoX</h3>
+  <ol>
+    <li>Andá a <a href="https://github.com/giannirisieri-collab/nidox-releases/releases">github.com/giannirisieri-collab/nidox-releases/releases</a>.</li>
+    <li>Descargá el ZIP de Windows: <code>NidoX-2.1.7-windows-x64.zip</code>.</li>
+    <li>Extraelo en cualquier carpeta (ej. <code>C:\Apps\NidoX\</code>).</li>
+    <li>Hacé doble clic en <code>NidoX.exe</code>.</li>
+  </ol>
+  <div class="warn">
+    <strong>Si Windows muestra "Aplicación no reconocida":</strong> hacé clic en
+    "Más información" → "Ejecutar de todas formas". Eso pasa solo la primera
+    vez. Estamos firmando los binarios — desde la próxima versión no aparece
+    el aviso.
+  </div>
+</div>
+
+<div class="step">
+  <div class="step-num">Paso 2 <span class="estimated">~30 seg</span></div>
+  <h3>Activar tu licencia</h3>
+  <p>Cuando abrís NidoX por primera vez te pide un código:</p>
+  <ol>
+    <li>Pegá el código que recibiste por email (formato <code>NDX-XXXX-XXXX-XXXXXXXX</code>).</li>
+    <li>Click en <strong>Activar</strong>.</li>
+  </ol>
+  <div class="ok">
+    <strong>Listo:</strong> ves el mensaje "Licencia válida" y arranca la
+    ventana principal con tu nombre arriba.
+  </div>
+  <p>Si perdiste el código andá a <a href="recover.html">recover.html</a>.</p>
+</div>
+
+<div class="step">
+  <div class="step-num">Paso 3 <span class="estimated">~1 min</span></div>
+  <h3>Crear tu primer proyecto</h3>
+  <p>Aparece el modal "¿En qué vas a trabajar hoy?":</p>
+  <ol>
+    <li>Click en <strong>+ Crear proyecto nuevo</strong>.</li>
+    <li>Escribí un nombre descriptivo: <code>tesis-doctorado</code>,
+        <code>app-fitness</code>, <code>guion-novela</code>, lo que sea. Sin
+        espacios o con guiones — el nombre se usa como carpeta en disco.</li>
+    <li>Click en <strong>Crear</strong>.</li>
+  </ol>
+  <p>Tu proyecto aparece como activo. La carpeta física vive en
+  <code>C:\Users\&lt;tu-usuario&gt;\.nidox\&lt;nombre-proyecto&gt;\</code>.</p>
+</div>
+
+<div class="step">
+  <div class="step-num">Paso 4 <span class="estimated">~10 seg</span></div>
+  <h3>Iniciar el server local</h3>
+  <p>En la ventana principal de NidoX vas a ver un botón verde grande:</p>
+  <ul>
+    <li>Click en <strong>▶ INICIAR NIDOX</strong>.</li>
+  </ul>
+  <p>El botón cambia a rojo (<strong>⏹ DETENER NIDOX</strong>) y el indicador
+  de status pasa a verde con el mensaje <em>"Activo en localhost:7474"</em>.
+  Eso significa que la app está lista para que la extensión Chrome se
+  conecte.</p>
+  <div class="warn">
+    <strong>Dejá la ventana abierta</strong> mientras estés trabajando con
+    IAs. Podés minimizarla pero no cerrarla — si la cerrás, el server se
+    apaga y la extensión queda desconectada.
+  </div>
+</div>
+
+<div class="step">
+  <div class="step-num">Paso 5 <span class="estimated">~1 min</span></div>
+  <h3>Instalar la extensión Chrome</h3>
+  <ol>
+    <li>Abrí Chrome (o Edge, Brave, Arc — cualquier navegador Chromium).</li>
+    <li>Andá a <a href="https://chromewebstore.google.com/detail/nidox/">Chrome Web Store: NidoX</a>
+        (o buscá "NidoX" en el store).</li>
+    <li>Click en <strong>Añadir a Chrome</strong> → <strong>Añadir extensión</strong>.</li>
+  </ol>
+  <p>La extensión queda instalada y aparece su ícono morado en la barra de
+  Chrome. La primera vez que se conecta a NidoX, te aparece un diálogo en la
+  app preguntando "¿Permitir esta extensión?" — click en <strong>SÍ</strong>.</p>
+</div>
+
+<div class="step">
+  <div class="step-num">Paso 6 <span class="estimated">~1 min</span></div>
+  <h3>Abrir tu IA y hacer la primera sesión</h3>
+  <p>Abrí una pestaña nueva con la IA que prefieras:</p>
+  <ul>
+    <li><a href="https://chatgpt.com">chatgpt.com</a></li>
+    <li><a href="https://claude.ai">claude.ai</a></li>
+    <li><a href="https://gemini.google.com">gemini.google.com</a></li>
+    <li>U otra de las 9 plataformas soportadas (ver <a href="faq.html">FAQ</a>).</li>
+  </ul>
+  <p>A los <strong>~2 segundos</strong> de cargar la página vas a ver:</p>
+  <ul>
+    <li>Un <strong>botón flotante morado abajo a la izquierda</strong>:
+        <em>"⏹ Terminar sesión y guardar"</em>.</li>
+    <li>Un <strong>modal centrado</strong> preguntando "¿En qué proyecto
+        trabajás hoy?". Elegí el proyecto que creaste y click en
+        <strong>Trabajar en este proyecto</strong>.</li>
+  </ul>
+  <p>Si tu proyecto no tenía memoria previa, la IA no recibe contexto extra.
+  Si ya habías guardado sesiones, NidoX inyecta automáticamente la Memoria
+  Maestra del proyecto.</p>
+  <p>Ahora <strong>chateá con la IA como siempre</strong>. Tomate al menos
+  unos minutos de conversación real para que el resumen del paso siguiente
+  tenga contenido.</p>
+</div>
+
+<div class="step">
+  <div class="step-num">Paso 7 <span class="estimated">~1-2 min</span></div>
+  <h3>Cerrar la sesión y verificar que se guardó</h3>
+  <ol>
+    <li>Cuando termines de chatear, click en <strong>⏹ Terminar sesión y
+        guardar</strong> (botón morado abajo a la izquierda).</li>
+    <li>Ves un toast: <em>"NidoX: pidiendo resumen y memoria a la IA..."</em>.</li>
+    <li>NidoX inyecta automáticamente un prompt largo en el input de la IA
+        y lo envía. La IA responde con un resumen estructurado.</li>
+    <li>Cuando la respuesta termina (toma 30-60 segundos), aparece un modal
+        con dos pestañas: <strong>Resumen de la sesión</strong> y
+        <strong>Memoria maestra actualizada</strong>. Revisá ambas — si algo
+        está raro podés editarlo en el textarea.</li>
+    <li>Click en <strong>💾 Guardar</strong>.</li>
+  </ol>
+  <div class="ok">
+    <strong>¡Listo!</strong> Toast verde: <em>"NidoX: guardado en
+    'tu-proyecto' — memoria maestra actualizada"</em>. La conversación quedó
+    archivada localmente y tu Memoria Maestra refleja lo nuevo.
+  </div>
+  <h4>Verificar en disco (opcional)</h4>
+  <p>Si querés ver los archivos físicos:</p>
+  <pre>cd C:\Users\&lt;tu-usuario&gt;\.nidox\&lt;tu-proyecto&gt;
+dir
+# Vas a ver:
+# - knowledge_index.json   ← contador de sesiones, aprendizajes acumulados
+# - memoria_maestra.md     ← el documento vivo (lo que la IA reescribe)
+# - sesion_2026-04-27_*.md ← resumen legible de la sesión que cerraste
+# - session_*.json         ← data cruda
+# - backup/                ← versiones previas por si querés rollback</pre>
+</div>
+
+<!-- ──────────────────────────────────────────────────────────── -->
+
+<h2>Próximas sesiones</h2>
+
+<p>De acá en más, el flujo es más corto:</p>
+<ol>
+  <li>Abrir NidoX (si no está corriendo). Click en INICIAR NIDOX.</li>
+  <li>Abrir pestaña con tu IA. NidoX inyecta automáticamente el contexto del
+      proyecto activo — la IA arranca <strong>sabiendo todo lo que charlaron
+      antes</strong>.</li>
+  <li>Conversar.</li>
+  <li>Click en "⏹ Terminar sesión y guardar" cuando termines.</li>
+</ol>
+
+<p><strong>Tiempo total por sesión:</strong> 5 segundos arriba + 5 segundos
+abajo = 10 segundos de overhead para tener memoria persistente. La IA
+arranca <em>actualizada</em>, no como si te estuvieras presentando de cero
+cada vez.</p>
+
+<h2>¿Qué hacer si algo falla?</h2>
+
+<p>Tres archivos te dan señal rápida cuando hay problemas:</p>
+<ul>
+  <li><code>~/.nidox/.errors.log</code> — tracebacks de errores (rotativo).</li>
+  <li><code>~/.nidox/.analytics.jsonl</code> — eventos de uso (sesiones
+      guardadas, fallos detectados).</li>
+  <li>Console de Chrome (F12 en una pestaña de IA) — errores en la
+      extensión.</li>
+</ul>
+
+<p>Si necesitás ayuda mandanos un email con esos archivos adjuntos o pegando
+las últimas 50 líneas. Email: <a href="mailto:gianni.risieri@gmail.com">gianni.risieri@gmail.com</a>.</p>
+
+<hr>
+
+<p class="meta">
+Quickstart actualizado a NidoX v2.1.7. Última revisión 2026-04-27.<br>
+¿Recomendás cambios a este documento? Mandanos sugerencias por email.
+</p>
+
+</body>
+</html>
