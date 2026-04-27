@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aviso GDPR — NidoX</title>
+<style>
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    max-width: 720px;
+    margin: 40px auto;
+    padding: 0 20px;
+    line-height: 1.6;
+    color: #222;
+  }
+  h1 { font-size: 28px; margin-bottom: 4px; }
+  h2 { font-size: 18px; margin-top: 32px; color: #333; }
+  .updated { color: #888; font-size: 14px; margin-bottom: 32px; }
+  ul { padding-left: 20px; }
+  li { margin: 6px 0; }
+  a { color: #4a3aa0; }
+  code {
+    background: #f4f4f4;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-size: 13px;
+  }
+  .highlight {
+    background: #f4f1ff;
+    border-left: 3px solid #4a3aa0;
+    padding: 12px 16px;
+    margin: 16px 0;
+    border-radius: 4px;
+  }
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 16px 0;
+    font-size: 14px;
+  }
+  th, td {
+    border: 1px solid #eee;
+    padding: 8px 10px;
+    text-align: left;
+    vertical-align: top;
+  }
+  th { background: #fafafa; color: #333; font-weight: 600; }
+  footer {
+    margin-top: 48px;
+    padding-top: 16px;
+    border-top: 1px solid #eee;
+    color: #888;
+    font-size: 13px;
+  }
+</style>
+</head>
+<body>
+
+<h1>Aviso GDPR — NidoX</h1>
+<p class="updated">Última actualización: 27 de abril de 2026</p>
+
+<div class="highlight">
+<strong>En resumen:</strong> NidoX es local-first. El contenido de tus chats con asistentes de IA <strong>nunca</strong> sale de tu computadora. Los únicos datos personales que procesamos son tu email de compra, tu código de licencia y un identificador anónimo de máquina (hash). Los datos viven en Cloudflare (cumple GDPR), Paddle (Merchant of Record) y Resend (envío de emails).
+</div>
+
+<h2>1. Responsable del tratamiento</h2>
+<p>El responsable del tratamiento es Gianni Signorelli, en el marco de SANSON SOFTWARE SpA (Chile). Para consultas, ejercer derechos GDPR o reportar incidentes, escribir a <a href="mailto:gianni.risieri@gmail.com">gianni.risieri@gmail.com</a>.</p>
+
+<h2>2. Qué datos personales tratamos</h2>
+<table>
+  <tr><th>Dato</th><th>Para qué</th><th>Base legal</th><th>Retención</th></tr>
+  <tr>
+    <td>Email de compra</td>
+    <td>Enviarte el código de licencia y soporte</td>
+    <td>Ejecución de contrato (Art. 6.1.b)</td>
+    <td>Mientras tengas licencia activa + 5 años (obligación contable)</td>
+  </tr>
+  <tr>
+    <td>Código de licencia</td>
+    <td>Validar tu acceso al producto</td>
+    <td>Ejecución de contrato (Art. 6.1.b)</td>
+    <td>Mientras tengas licencia activa + 5 años</td>
+  </tr>
+  <tr>
+    <td>Hash de identificador de máquina (MAC + hostname → SHA-256)</td>
+    <td>Limitar el código a la cantidad de PCs autorizadas</td>
+    <td>Interés legítimo (Art. 6.1.f) — prevención de uso compartido</td>
+    <td>Mientras tengas licencia activa</td>
+  </tr>
+  <tr>
+    <td>IP y user-agent en logs de verificación</td>
+    <td>Auditoría técnica anti-fraude</td>
+    <td>Interés legítimo (Art. 6.1.f)</td>
+    <td>90 días</td>
+  </tr>
+  <tr>
+    <td>Tracebacks de error (Sentry, opt-in explícito)</td>
+    <td>Detectar bugs en NidoX</td>
+    <td>Consentimiento (Art. 6.1.a)</td>
+    <td>30 días en Sentry</td>
+  </tr>
+  <tr>
+    <td>Datos de pago (últimos 4 dígitos, país, etc.)</td>
+    <td>Procesar tu compra</td>
+    <td>Ejecución de contrato (Art. 6.1.b)</td>
+    <td>Según política de Paddle (típicamente 7 años)</td>
+  </tr>
+</table>
+
+<h2>3. Qué NO procesamos</h2>
+<ul>
+  <li><strong>El contenido de tus chats con IAs:</strong> queda 100% en tu computadora en <code>~/.nidox/</code>. No tenemos acceso técnico ni legal a esos datos.</li>
+  <li>Tu nombre legal completo (a menos que lo proveas voluntariamente al pagar).</li>
+  <li>Datos de tracking comportamental, cookies de seguimiento o fingerprinting del navegador.</li>
+  <li>Datos sensibles del Art. 9 GDPR (salud, política, religión, orientación sexual, etc.).</li>
+</ul>
+
+<h2>4. Tus derechos</h2>
+<p>Como sujeto de datos en la Unión Europea, el Espacio Económico Europeo o el Reino Unido, tenés los siguientes derechos:</p>
+<ul>
+  <li><strong>Acceso</strong> (Art. 15) — copia de los datos que tenemos sobre vos.</li>
+  <li><strong>Rectificación</strong> (Art. 16) — corregir datos incorrectos.</li>
+  <li><strong>Supresión</strong> (Art. 17, "derecho al olvido") — borrar tus datos. Esto cancela tu licencia (no podemos darte producto si te borrás).</li>
+  <li><strong>Limitación</strong> (Art. 18) — pausar el procesamiento.</li>
+  <li><strong>Portabilidad</strong> (Art. 20) — recibir tus datos en formato estructurado (JSON / CSV).</li>
+  <li><strong>Oposición</strong> (Art. 21) — objetar al tratamiento basado en interés legítimo.</li>
+  <li><strong>No ser sometido a decisiones automatizadas</strong> (Art. 22) — NidoX no toma decisiones automatizadas con tus datos personales.</li>
+</ul>
+<p>Para ejercer cualquier derecho, escribinos a <a href="mailto:gianni.risieri@gmail.com">gianni.risieri@gmail.com</a> con asunto "GDPR — [tu derecho]". Respondemos en máximo 30 días según el Art. 12.3.</p>
+
+<h2>5. Transferencias internacionales</h2>
+<p>Tus datos pueden procesarse en infraestructura de los siguientes proveedores:</p>
+<ul>
+  <li><strong>Cloudflare</strong>: CDN y backend de licencias. Red global con presencia en la UE; los datos residen en regiones EU cuando es posible.</li>
+  <li><strong>Paddle</strong> (Paddle.com Market Limited, Reino Unido): Merchant of Record. Procesa tu pago y emite la factura.</li>
+  <li><strong>Resend</strong>: envío de emails transaccionales. Servidores en EE.UU. Base legal: cláusulas contractuales tipo (SCCs).</li>
+  <li><strong>Sentry</strong> (solo si activaste telemetría opt-in): EE.UU.</li>
+</ul>
+
+<h2>6. Cookies y tecnologías similares</h2>
+<p>El sitio web <code>nidox-web</code> donde estás leyendo esto <strong>no usa cookies</strong> ni tracking. La página de pago (Paddle Checkout) usa sus propias cookies de sesión — ver <a href="https://www.paddle.com/legal/privacy">política de privacidad de Paddle</a>.</p>
+<p>La extensión de Chrome usa <code>chrome.storage.local</code> para guardar el token de auth y la preferencia de inyección automática. Estos datos quedan en tu navegador, no en nuestros servidores.</p>
+
+<h2>7. Cómo presentar una queja</h2>
+<p>Si creés que violamos tus derechos GDPR, primero contactanos. Si no estás conforme con nuestra respuesta, tenés derecho a presentar queja ante tu autoridad de protección de datos local. Lista completa: <a href="https://edpb.europa.eu/about-edpb/about-edpb/members_en">EDPB members</a>.</p>
+
+<h2>8. Cambios a este aviso</h2>
+<p>Cambios materiales se notifican por email con 30 días de anticipación. La versión vigente vive en <a href="https://giannirisieri-collab.github.io/nidox-web/gdpr.html">esta URL</a>.</p>
+
+<h2>9. Contacto</h2>
+<p><strong>Email:</strong> <a href="mailto:gianni.risieri@gmail.com">gianni.risieri@gmail.com</a></p>
+<p>Para detalles técnicos del procesamiento, ver también la <a href="privacy.html">Política de Privacidad</a>.</p>
+
+<footer>
+  © 2026 Gianni Signorelli — SANSON SOFTWARE SpA. Todos los derechos reservados.
+</footer>
+
+</body>
+</html>
